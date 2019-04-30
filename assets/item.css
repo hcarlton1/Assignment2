@@ -1,0 +1,142 @@
+div.container {
+  width: 100%;
+  border: 1px darkorange;
+}
+.site-button{
+  font-family: Verdana;
+  display: inline-block;
+  background-color: rgb(73, 172, 247);
+  color:#ffffff;
+  font-weight: normal;
+  font-size: 14px;
+  border: none;
+  padding-left:15px;
+  padding-right: 15px;
+  padding-top:3px;
+  padding-bottom:3px;
+  box-shadow: 0 1px 2px 0 #696969;
+  text-decoration: none;
+}
+
+
+header {
+  padding: 1em;
+  color: white;
+  background-color: rgb(73, 172, 247);
+  clear: left;
+  text-align: center;
+
+}
+p {
+  font-family: sans-serif;
+  text-indent: 50px;
+  text-align: left justify;
+
+}
+.item-content{
+    max-width: 80%;
+    align-content: center;
+    text-align: justify;
+    position: absolute;
+    margin-right: 5%;
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgb(73, 172, 247);
+  text-align: center;
+}
+
+.header_menu {
+  text-align: right;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: xx-large;
+  font-stretch: ultra-condensed;
+  color: white;
+}
+
+h2 {
+  text-decoration: underline;
+  text-shadow: 50%;
+  text-align: center;
+  font-size: large;
+}
+h3{
+  text-align: center;
+  font-size: medium;
+
+}
+h4 {
+  text-align: center;
+  font-size: large;
+  font-weight: 300;
+}
+p {
+  text-indent: 50px;
+  text-align: justify;
+}
+
+.login_form {
+  padding-bottom: 2px;
+}
+
+nav {
+  float: left;
+  width: 13%;
+  padding: 20px;
+  height: 600px;
+  background-color: #f1f1f1;
+
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+nav ul a {
+  text-decoration: none;
+}
+
+article {
+  margin-left: 170px;
+  border-left: 1px solid gray;
+  padding: 1em;
+  overflow: hidden;
+  height: 600px;
+
+}
+.producttitle{
+  font-weight: bold;
+  padding: 5px 0 5px 0;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.btn{
+    background-color: rgb(247, 168, 22);
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: center;
+
+}
+.item-photo{
+  width: 400px;
+  height: 250px;
+}

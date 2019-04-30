@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HC Photography</title>
+  <link rel="stylesheet"  type="text/css" href="/assets/item.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> </script> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+
+
+
+      <%- include ../partials/header %>
+
+
+      <%- include ../partials/user-navigation %>
+
+    </div>
+  </header>
+
+  <%- include ../partials/side-navigation %>
+
+  <article>
+
+    <div class="productbox">
+      <div class="producttitle">Photography</div> <a href="/catalog" class="site-button" style="float: right;">Continue Shopping</a>
+
+
+      <img src= '<%= data.item.ImageURL %>' alt="clt" class="item-photo">
+
+
+
+
+
+      <div class="producttitle"><i><%= data.item.itemName %></i>
+
+
+
+        <div class="producttitle"><%= data.item.price %></div>
+        <button class="site-button"> Add to Cart  </button>
+        <a href="/myOrders" class="site-button"> Save it</a>
+        <br>
+        <form action="/myOrders">
+          <input type="radio" name="YES" value="YES"> YES<br>
+          <input type="radio" name="NO" value="NO"> NO<br>
+          <button class="site-button"> Downloaded ? </button>
+        </form>
+
+
+        <br>
+        <div class = "item-content">
+
+            <p><%= data.item.area %> </p>
+            <p><%= data.item.description %> </p>
+        </div>
+      </div>
+      </div>
+
+  </article>
+
+  <% include ../partials/footer.ejs %>
+
+
+</body>
+
+</html>

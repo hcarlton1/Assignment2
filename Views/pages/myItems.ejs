@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HC Photography</title>
+    <link rel="stylesheet"  type="text/css" href="/assets/myItems.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+
+</head>
+
+<body>
+    <header>
+      <div class="container">
+            <%- include ../partials/header %>
+            <%- include ../partials/user-navigation %>
+            </div>
+  </header>
+    <%- include ../partials/side-navigation %>
+  <article>
+      <h3> Michael Scott's Saved Images</h3>
+
+
+      <div class="container">
+
+          <table>
+              <tr>
+                  <th> Picture </th>
+                  <th> Category </th>
+                  <th> My Rating </th>
+                  <th> Downloaded It </th>
+                  <th>  </th>
+                  <th> </th>
+              </tr>
+              <% for(var i=0; i < itemList.length; i++){ %>
+                <tr>
+                    <td><%= itemList[i].item.name%></td>
+                    <td><%= itemList[i].item.category%></td>
+                    <td><%= itemList[i].rating%></td>
+                    <td><%= itemList[i].madeIt%></td>
+                </tr>
+            <% } %>
+
+              <tr>
+              <td><i class="fa fa-camera-retro" style ="font-size: 24px;"></i> <a href="/catalog/item/111"> Chasing Light Rails in the Queen City.</a> </td>
+              <td> Landscapes </td>
+              <td>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>   </td>
+              <td><label>
+                  <i class="fa fa-check-square-o" style="font-size: 24px;"></i>
+              </label></td>
+
+
+                  <td><a href="/feedback" class="site-button">Submit</a></td>
+                  <td><a href="/myOrders" class="site-button">Delete</a></td>
+
+
+
+              <tr>
+              <td><a href="#" >Bank of America Stadium.</a></td>
+              <td> Sports </td>
+              <td>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+              </td>
+
+              <td>
+                  <span class="fa fa-spinner spinning"></span>
+              </td>
+
+              <td><a href="/feedback" class="site-button">Submit</a></td>
+              <td><a href="/myOrders" class="site-button">Delete</a></td>
+
+
+              <tr>
+                  <td><a href="#" >North Carolina State's Bell Tower.</a></td>
+                  <td> Sports </td>
+                  <td>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+
+
+                  </td>
+                  <td>
+                      <span class="fa fa-spinner spinning"></span>
+                  </td>
+
+                  <td><a href="/feedback" class="site-button">Submit</a></td>
+                  <td><a href="/myOrders" class="site-button">Delete</a></td>
+
+
+          </table>
+        </div>
+        <br>
+
+
+        <i class="fa fa-camera-retro" style ="font-size: 24px; "></i> <p>Indicates that this item belongs to you.  </p>
+        <p>Click <a href="#">here</a> to share your saved list with your friends!</p>
+
+
+
+    </article>
+
+    <%- include ../partials/footer %>
+
+    </body>
+</html>
